@@ -1,0 +1,17 @@
+{
+	"name": "Create Table",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE Orders2  (      \n    OrderID int IDENTITY(1,1) NOT NULL     ,\n    OrderDate datetime NOT NULL     ,\n    OrderDescription char(15) DEFAULT 'NewOrder' )  \n    WITH  \n    (   CLUSTERED INDEX (OrderID)  ,   \n    DISTRIBUTION = HASH(OrderDate)  );\n\n    --select * from Orders",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "sudiptodpool1",
+				"poolName": "sudiptodpool1"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

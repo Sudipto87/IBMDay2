@@ -1,0 +1,17 @@
+{
+	"name": "Insert data",
+	"properties": {
+		"content": {
+			"query": "SET NOCOUNT ON   DECLARE @i INT\nSET @i = 1   DECLARE @date DATETIME \nSET @date = dateadd(mi,@i,'2017-02-04')  \n     WHILE (@i <= 60)   \n     BEGIN    \n     INSERT INTO [Orders2] (OrderDate) SELECT @date   SET @i = @i+1;   \n     END\n\n\n     select * from [Orders2]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "sudiptodpool1",
+				"poolName": "sudiptodpool1"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
